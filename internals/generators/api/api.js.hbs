@@ -1,0 +1,39 @@
+// API for {{camelCase name}}
+export const {{camelCase name}} = async () => {
+
+  {{#ifCond method '==' 'get'}}  
+  const json = await ky.get(``, {
+    headers: {
+      token: Cookies.get('token'),
+    },
+  }).json()
+  return json
+  {{/ifCond}}
+
+  {{#ifCond method '==' 'post'}}  
+  const json = await ky.post(``, {
+    headers: {
+      token: Cookies.get('token'),
+    },
+  }).json()
+  return json
+  {{/ifCond}}
+
+{{#ifCond method '==' 'patch'}}  
+  const json = await ky.patch(``, {
+    headers: {
+      token: Cookies.get('token'),
+    },
+  }).json()
+  return json
+{{/ifCond}}
+
+{{#ifCond method '==' 'delete'}}  
+  const json = await ky.delete(``, {
+    headers: {
+      token: Cookies.get('token'),
+    },
+  }).json()
+  return json
+{{/ifCond}}
+}

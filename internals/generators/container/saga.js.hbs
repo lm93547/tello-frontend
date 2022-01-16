@@ -1,0 +1,14 @@
+import { take, call, put, select, takeEvery } from 'redux-saga/effects';
+{{#if wantApi}}
+import * as api from './api'
+{{/if}}
+import * as actions from './actions'
+import * as consts from './constants'
+
+// PUT ALL SAGAS BELOW THIS LINE AND DO NOT REMOVE
+
+// Individual exports for testing
+export default function* {{ camelCase name }}Saga() {
+  // See example in containers/HomePage/saga.js
+  // add new takeeveryhere DO NOT REMOVE
+}

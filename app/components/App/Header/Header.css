@@ -1,0 +1,43 @@
+.header-outer {
+    z-index: 20;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+}
+
+.bg-g-header {
+    background: linear-gradient(90deg, rgba(232,232,232,1) 0%, rgba(235,235,235,1) 35%, rgba(235,235,235,1) 100%);
+}
+
+.bg-g-header-dark {
+    background: rgb(70,70,70);
+    background: linear-gradient(90deg, rgba(70,70,70,1) 0%, rgba(32,32,32,1) 35%, rgba(0,0,0,1) 100%);
+}
+
+.header-title {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.right-holder {
+    padding-right: 8px;
+    display: flex;
+    font-size: 20px;
+}
+
+.menu-icon-holder {
+    font-size: 24px;
+}
+
+.menu-icon {
+    stroke-width: 2;
+    transition: all .5s;
+}
+
+.menu-icon:hover {
+    stroke-width: 1;
+    transition: all .5s;
+}
