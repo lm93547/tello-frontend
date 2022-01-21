@@ -12,3 +12,5 @@ This will spin up the local control and viewing window at [http://localhost:4000
 - [JSMpegPlayer](https://github.com/cycjimmy/jsmpeg-player)
 - DJI Tello
 
+Main screen controls and video screen:
+![Screenshot 2022-01-21 at 20 56 25](https://user-images.githubusercontent.com/49888000/150599093-be5f2c9b-ddfa-4fe9-9a28-6560c5e2de62.png)
