@@ -12,6 +12,7 @@ import appReducer from './reducer';
 import  {ToastContainer}  from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { modal } from '../../components/shared/ModalContainer';
+import { MainPage } from '../MainPage/index';
 
 function App({dispatch, app, map,...props}) {
 
@@ -22,7 +23,7 @@ function App({dispatch, app, map,...props}) {
           <Routes>
                 <Route 
                   path="/"           
-                  element={<>Test</>} 
+                  element={<MainPage/>} 
                 />
           </Routes>
           </div>

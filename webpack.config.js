@@ -109,7 +109,7 @@ module.exports = (env, argv) => {
       hotOnly: true,
       contentBase: 'app',
       historyApiFallback: true, //For react router
-      port: 3000,
+      port: 4000,
       watchContentBase: true,
     };
   }
