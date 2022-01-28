@@ -21,7 +21,7 @@ const BatteryStyles = styled.div`
   background: #c5c5c5;
   .batteryLevel {
     transition: all 0.5s;
-    height: ${props => props.level}%;
+    width: ${props => props.level}%;
     text-align: center;
     color: white;
     display: block;

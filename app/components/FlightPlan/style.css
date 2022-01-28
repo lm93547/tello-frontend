@@ -1,0 +1,23 @@
+.flight-plan-outer {
+    margin-left: 28px;
+}
+
+.flight-plan-item {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    color: white;
+    background-color: rgb(75, 75, 75);
+}
+
+.input-holder {
+    width: 100%;
+}
+
+.input-holder input {
+    width: 100%;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+}

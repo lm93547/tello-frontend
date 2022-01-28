@@ -23,12 +23,15 @@ import { config } from '../../../../config';
 import { SideMenuAction } from '../../../containers/App/actions';
 import { DarkModeAction } from '../../../containers/App/actions';
 import { modal } from '../../shared/ModalContainer/index';
+import { useSocket } from '../../../containers/MainPage';
 
 
 function Header({ app, dispatch }) {
+  const status = useSocket();
+  const statusClassName = status === "DISCONNECTED" ? "disconnected-class" : "connected-class"
   const darkMode = app.darkMode ? 'dark-mode bg-g-header-dark' : 'bg-g-header';
   return (
-    <div className={`header-outer  ${darkMode}`}>
+    <div className={`header-outer  ${darkMode} ${statusClassName}`}>
       <div className="flex align-items-center">
         <div
           className="menu-icon-holder mr-2 ml-2"

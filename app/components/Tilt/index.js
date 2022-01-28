@@ -39,11 +39,7 @@ const TiltStyles = styled.div`
 
 function Tilt({ pitch, roll, yaw, height }) {
   return (
-    <TiltWrap>
-    <span>Pitch: {pitch}</span>
-    <span>Roll: {roll}</span>
-    <span>Yaw: {yaw}</span>
-    <span>Height: {height / 100}M</span>
+  <TiltWrap>
     <TiltStyles pitch={pitch} roll={roll} yaw={yaw} />
   </TiltWrap>
   );

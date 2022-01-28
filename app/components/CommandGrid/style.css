@@ -90,3 +90,29 @@
   font-size: 24px;
   font-weight: 700;
 }
+
+.d-flex {
+  display: flex;
+}
+
+.turn-state-btn {
+  background-color: rgb(82, 82, 82);
+  padding: 6px;
+  color: white;
+}
+
+.turn-state-btn-active {
+  border: solid 1px white
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.jc-center {
+  justify-content: center;
+}
+
+.jc-between {
+  justify-content: space-between;
+}

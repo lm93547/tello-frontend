@@ -4,7 +4,7 @@
  *
  */
 
-import React, { memo } from "react";
+import React, { memo, useState } from "react";
 // import PropTypes from 'prop-types';
 import "./style.css";
 import styled from "styled-components";
@@ -21,19 +21,21 @@ function CommandGrid() {
     };
   }
 
-  const amount = 100;
+  const [turnState, setTurnState] = useState(15)
 
+  const amount = 100;
+  const turns = [15, 30, 60, 90, 180, 360]
   return (
     <div>
       <div className="btn-holder">
-        <button className="btn rotate top-left" onClick={sendCommand("ccw 15")}>
-          <span className="symbol">⟲</span> 15°
+        <button className="btn rotate top-left" onClick={sendCommand(`ccw ${turnState}`)}>
+          <span className="symbol">⟲</span> {turnState}
         </button>
         <button title={`forward ${amount}cm`} className="btn" onClick={sendCommand(`forward ${amount}`)}>
           <span className="symbol"><ImArrowUp2/></span>
         </button>
-        <button className="rotate btn top-right" onClick={sendCommand("cw 90")}>
-          <span className="symbol">⟳</span> 15°
+        <button className="rotate btn top-right" onClick={sendCommand(`cw ${turnState}`)}>
+          <span className="symbol">⟳</span> {turnState}
         </button>
         <button title={`left ${amount}cm`} className="btn" onClick={sendCommand(`left ${amount}`)}>
           <span className="symbol"><ImArrowLeft2/></span>
@@ -49,15 +51,25 @@ function CommandGrid() {
         <button title={`right ${amount}cm`} className="btn" onClick={sendCommand(`right ${amount}`)}>
           <span className="symbol"><ImArrowRight2/></span>
         </button>
-        <button className="btn rotate bottom-left" onClick={sendCommand("ccw 15")}>
-          <span className="symbol">⟲</span> 15°
+        <button className="btn rotate bottom-left" onClick={sendCommand(`ccw ${turnState}`)}>
+          <span className="symbol">⟲</span> {turnState}
         </button>
         <button title={`back ${amount}cm`} className="btn" onClick={sendCommand(`back ${amount}`)}>
           <span className="symbol"><ImArrowDown2/></span>
         </button>
-        <button className="rotate bottom-right btn" onClick={sendCommand("cw 90")}>
-          <span className="symbol">⟳</span> 15°
+        <button className="rotate bottom-right btn" onClick={sendCommand(`cw ${turnState}`)}>
+          <span className="symbol">⟳</span> {turnState}
         </button>
+      </div>
+      <div>
+        Turn Modifier
+        <div className='d-flex w-100 jc-between'>
+        {turns.map((element)=>{
+          return <div className={`turn-state-btn ${element === turnState ? 'turn-state-btn-active' : ''}`} onClick={()=>{
+            setTurnState(element)
+          }}>{element}</div>
+        })}
+        </div>
       </div>
       <div className="center">
         <button className="btn takeoff" onClick={sendCommand("takeoff")}>
